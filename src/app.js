@@ -13,7 +13,14 @@ import orderRoutes from './routes/order.routes.js';
 const app = express();
 
 app.use(cors({
-    origin: 'http://localhost:5173',
+    origin: [ 
+                'http://localhost:5173',
+                'http://127.0.0.1:5173',
+                'http://localhost',
+                'http://localhost/productos',
+                'https://apiproductos-26ge.onrender.com',
+                'https://backend-wc62.onrender.com',
+],
     credentials:true
 }));
 app.use(morgan('dev'));
